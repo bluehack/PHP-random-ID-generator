@@ -8,10 +8,10 @@ $arr = explode(" ", $arr);
 
 for ($i=$length; $i>0; $i--)
   {
-  $x = rand(0, 25); // index of alphabet
-  $y = rand(0, 9); // only use single digit numbers
-  $random = rand(0, 1);
-  $case = rand(0, 1); // additional randomness, incase $random is already set 
+  $x = mt_rand(0, 25); // index of alphabet
+  $y = mt_rand(0, 9); // only use single digit numbers
+  $random = mt_rand(0, 1);
+  $case = mt_rand(0, 1); // additional randomness, incase $random is already set 
   
   $char = ($random > 0) ? ($charCase = ($case > 0) ? $arr[$x] : strtoupper($arr[$x])) : $y;
 
